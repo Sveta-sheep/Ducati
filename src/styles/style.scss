@@ -1,0 +1,606 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #FFFFFF;
+}
+
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+p {
+    margin-bottom: 0 !important;
+}
+
+body {
+    background: url("../assets/images/BG58-01.webp");
+    position: relative;
+
+    .logo-wrapper {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .monster {
+            padding-top: 45px;
+        }
+    }
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 158px;
+    margin-top: 61px;
+
+    .menu-text {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    p {
+        font-family: "Lato";
+
+        line-height: 17px;
+        letter-spacing: 0.085em;
+        margin-left: 9px;
+    }
+}
+
+.carousel-item .number {
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 200px;
+    line-height: 240px;
+    text-align: center;
+    margin-top: 120px;
+    z-index: -1;
+}
+
+
+.carousel-item__motorcycle {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 135px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.carousel-indicators {
+    bottom: 108px;
+}
+
+.carousel-indicators li {
+    width: 60px !important;
+    height: 60px !important;
+    border-radius: 30%;
+    opacity: 1;
+    margin-left: 65px;
+}
+
+
+
+.carousel-indicators li:nth-child(1) {
+    background-color: red;
+    filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.15));
+    opacity: 60%;
+}
+
+.carousel-indicators li:nth-child(1).active {
+    filter: drop-shadow(0 0 8px red) !important;
+    opacity: 100% !important;
+}
+
+.carousel-indicators li:nth-child(1):hover {
+    filter: drop-shadow(0 0 6px red) !important;
+    opacity: 80%;
+}
+
+.carousel-indicators li:nth-child(2) {
+    background-color: black;
+    opacity: 1;
+    filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.15));
+    opacity: 60%;
+}
+
+.carousel-indicators li:nth-child(2).active {
+    filter: drop-shadow(0 0 8px black) !important;
+    opacity: 100% !important;
+}
+
+
+.carousel-indicators li:nth-child(2):hover {
+    filter: drop-shadow(0 0 6px black) !important;
+    opacity: 80%;
+}
+
+
+.carousel-indicators li:nth-child(3) {
+    background-color: grey;
+    opacity: 1;
+    filter: drop-shadow(0px 4px 16px rgba(0, 0, 0, 0.15));
+    opacity: 60%;
+}
+
+.carousel-indicators li:nth-child(3).active {
+    filter: drop-shadow(0 0 8px grey) !important;
+    opacity: 100% !important;
+}
+
+.carousel-indicators li:nth-child(3):hover {
+    filter: drop-shadow(0 0 6px grey) !important;
+    opacity: 80%;
+}
+
+.carousel-item__white-box {
+    background: #FFFFFF;
+    box-shadow: 0px 40px 30px rgba(60, 49, 13, 0.15);
+    border-radius: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: -1;
+    margin: 250px 30px 88px 30px;
+
+
+    .lozung {
+        width: 20%;
+        position: absolute;
+        right: 165px;
+        bottom: 124px;
+
+        &__one {
+            font-family: "Italianno" !important;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 50px;
+            line-height: 51px;
+            letter-spacing: 0.135em;
+            color: #707070;
+            position: relative;
+        }
+
+        &__two {
+            font-family: "Italianno" !important;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 50px;
+            line-height: 51px;
+            letter-spacing: 0.135em;
+            color: #707070;
+            position: relative;
+            left: 96px;
+        }
+    }
+}
+
+.carousel-item__characteristics-wrapper {
+    margin: 37px 0 51px 35px;
+
+    &__item {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 14px;
+        color: #181818 !important;
+        margin: 15px 0 4px 0;
+    }
+
+    p.carousel-item__characteristics-wrapper__description {
+        font-family: "Lato";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 121%;
+        letter-spacing: 0.095em;
+        color: #181818 !important;
+    }
+}
+
+.carousel-control-prev-icon {
+    background-image: url(../assets/images/arrows/Arrow-left.webp);
+    width: 50px;
+    height: 50px;
+}
+
+.carousel-control-next-icon {
+    background-image: url(../assets/images/arrows/Arrow-right.webp);
+    width: 50px;
+    height: 50px;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    opacity: 1;
+}
+
+/* 1200px
+992px
+768px
+480px
+320px */
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    header {
+        padding: 0 44px;
+
+        p {
+            font-size: 14px;
+        }
+
+        img {
+            width: 4%;
+        }
+    }
+
+    .logo-wrapper {
+        left: 45%;
+        transform: translateX(-45%);
+
+        .logo-ducati {
+            width: 100px;
+        }
+    }
+
+    body .logo-wrapper .monster {
+        padding-top: 20px;
+        width: 200px;
+    }
+
+    .carousel-item .number {
+        font-size: 117px;
+        line-height: 112px;
+    }
+
+    .carousel-item__motorcycle {
+        top: 40px;
+    }
+
+    .carousel-item__white-box {
+        margin: 315px 20px 24px 20px;
+
+        .lozung {
+            width: 30%;
+            right: 55px;
+            bottom: 30px;
+        }
+    }
+
+    .carousel-item__characteristics-wrapper {
+        margin: 34px 0 10px 24px;
+
+        &__description {
+            font-size: 17px;
+        }
+    }
+
+    .carousel-indicators {
+        bottom: 16px;
+
+        li {
+            margin-left: 19px;
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    header {
+        padding: 0 20px;
+        margin-top: 35px;
+
+        p {
+            font-size: 10px;
+            margin-left: 5px;
+        }
+
+        img {
+            width: 30px;
+        }
+    }
+
+    .menu-text img {
+        width: 15px;
+    }
+
+    .logo-ducati {
+        width: 65px;
+    }
+
+    body .logo-wrapper .monster {
+        width: 150px;
+        padding-top: 17px;
+    }
+
+    .carousel-item .number {
+        font-size: 90px;
+        margin-top: 6px;
+    }
+
+    .carousel-item__white-box {
+        margin: 100px 77px 35px 77px;
+
+        .lozung {
+            right: 160px;
+            bottom: 65px;
+
+            &__one {
+                font-size: 30px;
+                line-height: 10px;
+            }
+
+            &__two {
+                font-size: 30px;
+            }
+        }
+    }
+
+    .carousel-indicators {
+        bottom: 20px;
+
+        li {
+            margin-left: 15px;
+        }
+    }
+
+    .carousel-item__motorcycle {
+        top: 104px;
+
+        .d-block {
+            width: 624px !important;
+        }
+    }
+
+    .carousel-item__characteristics-wrapper {
+        margin: 42px 0 40px 35px;
+
+        &__item {
+            font-size: 10px;
+            margin: 10px 0 0 0;
+        }
+
+        &__description {
+            font-size: 16px;
+        }
+    }
+
+
+
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+    header {
+        padding: 0 15px;
+        margin-top: 25px;
+
+        img {
+            width: 25px;
+        }
+
+        .menu-text {
+            justify-content: space-around;
+            img {
+                width: 17px;
+            }
+
+            p {
+                text-align: center;
+                font-size: 10px;
+                margin-left: 2px;
+            }
+        }
+    }
+
+    body .logo-wrapper {
+        top: 35px;
+
+        .logo-ducati {
+            width: 70px;
+        }
+
+        .monster {
+            width: 135px;
+            padding-top: 10px;
+        }
+    }
+
+    .carousel-item .number {
+        font-size: 80px;
+        margin-top: 35px;
+    }
+
+    .carousel-item__motorcycle {
+        top: 130px;
+
+        .d-block {
+            width: 490px;
+        }
+    }
+
+    .carousel-item__white-box {
+        margin: 75px 55px 90px 55px;
+        flex-direction: column;
+        align-items: center;
+
+        .lozung {
+            width: 53%;
+            right: 95px;
+            bottom: 0;
+
+            &__one {
+                font-size: 30px;
+                line-height: 25px;
+                font-weight: 900;
+            }
+
+            &__two {
+                font-size: 30px;
+                font-weight: 900;
+            }
+        }
+    }
+
+    .carousel-item__characteristics-wrapper {
+        margin: 40px 120px 80px 120px;
+        ;
+        text-align: center;
+
+        &__item {
+            font-family: "Lato";
+            font-size: 8px;
+            margin: 6px 0 0 0;
+        }
+
+        &__description {
+            font-family: "Lato";
+            font-size: 12px;
+        }
+    }
+
+    .carousel-indicators {
+        bottom: 80px;
+
+        li {
+            width: 50px !important;
+            height: 50px !important;
+            margin-left: 20px;
+        }
+    }
+
+    .carousel-control-next,
+    .carousel-control-prev {
+        bottom: 120px;
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 479px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        padding: 0 3px;
+
+        img {
+            width: 35px;
+        }
+
+        p {
+            font-size: 11px;
+            margin-left: 3px;
+        }
+
+        .menu-text img {
+            width: 15px;
+        }
+    }
+
+    body .logo-wrapper {
+        top: 55px;
+
+        .logo-ducati {
+            width: 60px;
+        }
+
+        .monster {
+            width: 110px;
+            padding-top: 15px;
+        }
+    }
+
+    .carousel-item .number {
+        font-size: 60px;
+        margin-top: 20px;
+    }
+
+    .d-block {
+        width: 300px;
+    }
+
+    .carousel-item__white-box {
+        margin: 7px 42px 65px 42px;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 30px;
+        .lozung {
+            width: 50%;
+            right: 105px;
+            bottom: 0;
+            &__one {
+                font-weight: 900;
+                font-size: 25px;
+                line-height: 0;
+            }
+            &__two {
+                font-weight: 900;
+                font-size: 25px;
+            }
+        }
+
+    }
+
+    .carousel-item__characteristics-wrapper {
+        text-align: center;
+        margin: 40px 20px 51px 20px;
+
+        &__item {
+            font-size: 10px;
+            margin: 3px 0 0 0;
+        }
+
+        &__description {
+            font-size: 10px;
+        }
+    }
+
+    .carousel-indicators {
+        bottom: 45px;
+
+        li {
+            width: 40px !important;
+            height: 40px !important;
+            margin-left: 10px;
+        }
+    }
+    .carousel-control-prev-icon, .carousel-control-next-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+
+@font-face {
+    font-family: "Italianno";
+    src: url("../assets/fonts/Italianno-Regular.ttf");
+    font-display: fallback;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../assets/fonts/Lato/Lato-Black.ttf");
+    font-style: normal;
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "Lato";
+    src: url("../assets/fonts/Lato/Lato-Light.ttf");
+    font-style: normal;
+    font-weight: 300;
+}
